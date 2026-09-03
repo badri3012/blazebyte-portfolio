@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-primary antialiased;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Global Text Reveal Setup */
+.clip-text {
+  clip-path: inset(100% 0 0 0);
+  transform: translateY(40px);
+  will-change: clip-path, transform;
+}
+
+.h-screen {
+  height: 100vh;
+  height: 100dvh;
+}
+.min-h-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom cinematic selection - Blaze Orange */
+::selection {
+  background-color: rgba(255, 90, 20, 0.4);
+  color: white;
+}
+
+/* Base resets for 3D overlay */
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
