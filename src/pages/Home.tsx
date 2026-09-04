@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Hero from '../components/sections/Hero';
 import ServiceEcosystem from '../components/sections/ServiceEcosystem';
-import Vault from '../components/sections/Vault';
+import SelectedWork from '../components/sections/SelectedWork';
 import Method from '../components/sections/Method';
 import Capabilities from '../components/sections/Capabilities';
 import Credibility from '../components/sections/Credibility';
@@ -64,7 +64,7 @@ export default function Home() {
       <div ref={containerRef} className="w-full relative z-0">
         <div id="hero"><Hero /></div>
         <div id="services" className="scroll-mt-24"><ServiceEcosystem /></div>
-        <div id="work" className="scroll-mt-24"><Vault /></div>
+        <div id="work" className="scroll-mt-24"><SelectedWork /></div>
         <Credibility />
         <div id="about" className="scroll-mt-24"><Method /></div>
         <Capabilities />

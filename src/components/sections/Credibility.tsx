@@ -13,7 +13,7 @@ export default function Credibility() {
       // Entrance animation for tags
       const tags = gsap.utils.toArray('.ecosystem-tag');
       gsap.fromTo(tags, 
-        { opacity: 0, y: 20 },
+        { opacity: 0, y: 10 },
         { 
           opacity: 1, 
           y: 0, 

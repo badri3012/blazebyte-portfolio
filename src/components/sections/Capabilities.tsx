@@ -78,17 +78,7 @@ export default function Capabilities() {
         );
       });
       
-      // Exit Parallax for Handoff
-      gsap.to(containerRef.current, {
-        y: -100,
-        opacity: 0,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "bottom top",
-          end: "+=50%",
-          scrub: true,
-        }
-      });
+      // Exit parallax removed for stillness
     }, containerRef);
     return () => ctx.revert();
   }, []);

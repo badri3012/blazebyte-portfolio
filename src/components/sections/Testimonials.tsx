@@ -66,7 +66,7 @@ export default function Testimonials() {
         const speed = testimonials[i].speed;
         
         gsap.to(card, {
-          y: () => -100 * speed,
+          y: () => -40 * speed,
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -93,8 +93,8 @@ export default function Testimonials() {
     const y = (clientY - top) / height - 0.5;
 
     gsap.to(cardsRef.current, {
-      rotateY: x * 10,
-      rotateX: -y * 10,
+      rotateY: x * 4,
+      rotateX: -y * 4,
       duration: 1,
       ease: "power2.out",
       transformPerspective: 1000,

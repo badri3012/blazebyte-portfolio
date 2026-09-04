@@ -142,7 +142,7 @@ export default function Hero() {
         // --- AMBIENT DASHBOARD ANIMATIONS (Looping) ---
         
         // WEB: Lines drawing and signal travelling
-        const webTl = gsap.timeline({ repeat: -1, delay: 3 });
+        const webTl = gsap.timeline({ repeat: 2, delay: 6, repeatDelay: 4 });
         webTl.to(dashWebLines.current, { scaleX: 1, duration: 1.2, stagger: 0.15, ease: "power2.inOut" })
              .to(dashWebSignal.current, { x: 120, duration: 1.8, ease: "power1.inOut" }, "-=1")
              .to(dashWebLines.current, { scaleX: 0, duration: 1, stagger: 0.1, ease: "power2.inOut", transformOrigin: "right" }, "+=0.8")
@@ -150,7 +150,7 @@ export default function Hero() {
              .set(dashWebSignal.current, { x: 0 });
 
         // GROWTH: Chart line growing
-        const growthTl = gsap.timeline({ repeat: -1, delay: 3 });
+        const growthTl = gsap.timeline({ repeat: 2, delay: 6, repeatDelay: 4 });
         if (dashGrowthPath.current) {
           growthTl.to(dashGrowthPath.current, { strokeDashoffset: 0, duration: 3, ease: "power2.inOut" })
                   .to(dashGrowthSignal.current, { motionPath: { path: dashGrowthPath.current, align: dashGrowthPath.current, alignOrigin: [0.5, 0.5] }, duration: 3, ease: "power2.inOut" }, "<")
@@ -159,7 +159,7 @@ export default function Hero() {
         }
 
         // AUTOMATION: Sequential activation
-        const autoTl = gsap.timeline({ repeat: -1, delay: 3 });
+        const autoTl = gsap.timeline({ repeat: 2, delay: 6, repeatDelay: 4 });
         autoTl.to(dashAutoNodes.current[0], { opacity: 1, scale: 1.2, fill: "#FF5A00", duration: 0.4 })
               .to(dashAutoPaths.current[0], { strokeDashoffset: 0, duration: 0.5, ease: "none" })
               .to(dashAutoNodes.current[1], { opacity: 1, scale: 1.2, fill: "#FF5A00", duration: 0.4 })
@@ -171,15 +171,7 @@ export default function Hero() {
               .set(dashAutoNodes.current, { fill: "#111111", scale: 0.8 })
               .set(dashAutoPaths.current, { strokeDashoffset: 100 });
 
-        // Background Signal Traveling loop
-        if (bgSignalLineRef.current) {
-          gsap.to(bgSignalDotRef.current, {
-            motionPath: { path: bgSignalLineRef.current, align: bgSignalLineRef.current, alignOrigin: [0.5, 0.5] },
-            duration: 8,
-            ease: "power1.inOut",
-            repeat: -1
-          });
-        }
+        // Background signal dot: static after entrance (no infinite loop)
 
         // --- PREMIUM 3D MOUSE PARALLAX (Desktop) ---
         const xTo = gsap.quickTo(laptopInnerRef.current, "rotateY", { duration: 0.8, ease: "power3.out" });
@@ -207,8 +199,8 @@ export default function Hero() {
 
         // --- EXIT PARALLAX HANDOFF ---
         gsap.to(containerRef.current, {
-          y: -150,
-          opacity: 0.2,
+          y: -80,
+          opacity: 0.4,
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
@@ -297,7 +289,7 @@ export default function Hero() {
             </div>
 
             <div ref={statusRef} className="flex items-center gap-3 bg-white/50 backdrop-blur-sm px-4 py-2 border border-[#111111]/5 rounded-full">
-              <span className="w-2 h-2 bg-[#FF5A00] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,90,0,0.6)]" />
+              <span className="w-2 h-2 bg-[#FF5A00] rounded-full shadow-[0_0_4px_rgba(255,90,0,0.4)]" />
               <span className="font-mono text-[9px] tracking-widest text-[#111111]/60 uppercase font-bold">
                 SYSTEM STATUS — ACTIVE
               </span>
@@ -337,7 +329,7 @@ export default function Hero() {
                          <span className="font-mono text-[8px] md:text-[9px] tracking-[0.25em] text-[#111111] font-bold">BLAZEBYTE DIGITAL ENGINE</span>
                          <div className="flex items-center gap-3">
                            <span className="font-mono text-[8px] text-[#111111]/50 tracking-[0.2em]">SYS.ACTIVE</span>
-                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A00] shadow-[0_0_4px_rgba(255,90,0,0.5)]" />
+                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A00]" />
                          </div>
                       </div>
 

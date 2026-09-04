@@ -60,7 +60,7 @@ export default function CTA() {
       
       <div className="relative z-10 flex flex-col items-center">
         <div className="flex items-center gap-4 mb-8">
-          <span className="w-1.5 h-1.5 bg-[#FF5A14] animate-pulse" />
+          <span className="w-1.5 h-1.5 bg-[#FF5A14]" />
           <span className="text-[#FAF9F6]/60 text-[10px] tracking-[0.3em] font-mono font-bold uppercase">System Ready</span>
         </div>
         

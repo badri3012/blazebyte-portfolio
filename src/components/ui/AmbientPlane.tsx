@@ -63,7 +63,7 @@ export default function AmbientPlane() {
         })
         .set(planeRef.current, { x: mappedPath[0].x, y: mappedPath[0].y })
         .to(planeRef.current, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" })
-        .to(trailRef.current, { opacity: 0.6, duration: 0.2 }, "<")
+        .to(trailRef.current, { opacity: 0.35, duration: 0.2 }, "<")
         .to(trailRef.current, { strokeDashoffset: 0, duration: 2.5, ease: "power2.inOut" }, "-=0.2")
         .to(planeRef.current, {
           motionPath: {
@@ -129,12 +129,12 @@ export default function AmbientPlane() {
           stroke="#FF5A14" 
           strokeWidth="1.5" 
           strokeLinecap="round"
-          style={{ filter: 'drop-shadow(0 0 4px rgba(255,90,20,0.5))' }}
+          style={{ filter: 'drop-shadow(0 0 2px rgba(255,90,20,0.3))' }}
         />
       </svg>
       <div 
         ref={planeRef}
-        className="absolute top-0 left-0 text-[#FF5A14] w-6 h-6 flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_0_8px_rgba(255,90,20,0.8)]"
+        className="absolute top-0 left-0 text-[#FF5A14] w-5 h-5 flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_0_4px_rgba(255,90,20,0.4)]"
       >
         <PaperPlane className="w-full h-full -rotate-90" />
       </div>
