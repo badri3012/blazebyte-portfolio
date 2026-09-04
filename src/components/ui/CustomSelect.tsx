@@ -208,8 +208,8 @@ export default function CustomSelect({
           'w-full bg-transparent border-0 border-b p-4 pt-6 text-[15px] font-sans outline-none flex justify-between items-center cursor-pointer transition-all duration-300',
           isOpen
             ? 'border-b-[#FF5A00] shadow-[0_4px_24px_rgba(255,90,0,0.10)] text-[#F5F5F2]'
-            : 'border-b-[rgba(255,255,255,0.14)] text-[#F5F5F2] hover:bg-[rgba(255,255,255,0.02)] focus:border-b-[#FF5A00] focus:shadow-[0_4px_24px_rgba(255,90,0,0.10)]',
-          !value && 'text-[#71717A]/80',
+            : 'border-b-[rgba(255,255,255,0.25)] text-[#F5F5F2] hover:border-b-[rgba(255,255,255,0.35)] hover:bg-[rgba(255,255,255,0.02)] focus:border-b-[#FF5A00] focus:shadow-[0_4px_24px_rgba(255,90,0,0.10)]',
+          !value && 'text-[#9CA3AF]',
           className
         )}
       >
@@ -218,7 +218,7 @@ export default function CustomSelect({
         </span>
         <span
           className={cn(
-            'text-[10px] text-[#71717A] pointer-events-none transition-transform duration-300',
+            'text-[10px] text-[#9CA3AF] pointer-events-none transition-transform duration-300',
             isOpen && 'rotate-180'
           )}
         >

@@ -110,17 +110,17 @@ export default function Contact() {
     }
   };
 
-  // Shared input class
+  // Shared input class — strong contrast for readability
   const inputBase = [
-    "w-full bg-transparent border-0 border-b border-b-[rgba(255,255,255,0.14)]",
+    "w-full bg-transparent border-0 border-b border-b-[rgba(255,255,255,0.25)]",
     "p-4 pt-6 text-[#F5F5F2] font-sans text-[15px] outline-none",
     "transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]",
-    "placeholder:text-[#71717A]/80",
+    "placeholder:text-[#9CA3AF]",
     "focus:border-b-[#FF5A00] focus:shadow-[0_4px_24px_rgba(255,90,0,0.10)]",
-    "hover:bg-[rgba(255,255,255,0.02)]",
+    "hover:border-b-[rgba(255,255,255,0.35)] hover:bg-[rgba(255,255,255,0.02)]",
   ].join(" ");
   const labelBase = [
-    "text-[10px] font-mono tracking-[0.25em] text-[#A1A1AA] uppercase",
+    "text-[10px] font-mono tracking-[0.25em] text-[#D4D4D8] uppercase",
     "transition-colors duration-300 group-focus-within:text-[#F5F5F2]",
   ].join(" ");
 
@@ -179,10 +179,8 @@ export default function Contact() {
               id="glass-form-panel"
               className="relative z-10 rounded-lg"
               style={{
-                background: 'linear-gradient(135deg, rgba(24,24,28,0.88), rgba(10,10,12,0.72))',
-                backdropFilter: 'blur(24px)',
-                WebkitBackdropFilter: 'blur(24px)',
-                border: '1px solid rgba(255,255,255,0.12)',
+                background: 'linear-gradient(135deg, #18181C, #0A0A0C)',
+                border: '1px solid rgba(255,255,255,0.10)',
                 boxShadow: '0 30px 100px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.06)',
               }}
             >
@@ -199,7 +197,7 @@ export default function Contact() {
               </div>
 
               {/* System indicator bar */}
-              <div className="flex items-center justify-between px-6 md:px-10 py-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+              <div className="flex items-center justify-between px-6 md:px-10 py-5" style={{ borderBottom: '1px solid rgba(255,255,255,0.10)' }}>
                 <div className="flex items-center gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A00] animate-pulse" />
                   <span className="font-mono text-[9px] tracking-[0.3em] text-[#A1A1AA] uppercase font-bold">
@@ -294,7 +292,7 @@ export default function Contact() {
                   </div>
 
                   {/* Thin divider */}
-                  <div className="w-full h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent)' }} />
+                  <div className="w-full h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)' }} />
 
                   {/* Row 3: Service + Budget */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-10">
@@ -353,10 +351,10 @@ export default function Contact() {
                   </div>
                   
                   {/* Submit area & WhatsApp Fallback */}
-                  <div className="pt-6 mt-2" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                  <div className="pt-6 mt-2" style={{ borderTop: '1px solid rgba(255,255,255,0.10)' }}>
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                       <div className="flex flex-col gap-4 w-full md:w-auto">
-                        <p className="text-[10px] font-sans text-[#71717A] max-w-sm leading-relaxed">
+                        <p className="text-[10px] font-sans text-[#9CA3AF] max-w-sm leading-relaxed">
                           By submitting, you acknowledge our engineering team will evaluate your request against current studio capacity.
                         </p>
                         
