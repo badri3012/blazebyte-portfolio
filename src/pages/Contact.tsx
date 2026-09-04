@@ -35,7 +35,7 @@ export default function Contact() {
         // Panel entrance
         gsap.fromTo(panel,
           { opacity: 0, scale: 0.98, clipPath: 'inset(4% 4% 4% 4%)' },
-          { opacity: 1, scale: 1, clipPath: 'inset(0% 0% 0% 0%)', duration: 1.2, ease: 'power3.out', delay: 0.3 }
+          { opacity: 1, scale: 1, clipPath: 'inset(0% 0% 0% 0%)', duration: 1.2, ease: 'power3.out', delay: 0.3, clearProps: 'all' }
         );
         // Stagger children inside the form
         if (formRef.current) {
@@ -177,7 +177,7 @@ export default function Contact() {
             {/* ── The Glass Panel ── */}
             <div
               id="glass-form-panel"
-              className="relative z-10 rounded-lg overflow-hidden"
+              className="relative z-10 rounded-lg"
               style={{
                 background: 'linear-gradient(135deg, rgba(24,24,28,0.88), rgba(10,10,12,0.72))',
                 backdropFilter: 'blur(24px)',
